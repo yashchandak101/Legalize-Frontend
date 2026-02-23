@@ -1,0 +1,264 @@
+/* AI Legal Aid Custom Styles */
+
+/* Enhanced scrollbar styling */
+.legal-aid-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.legal-aid-scrollbar::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.legal-aid-scrollbar::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 3px;
+}
+
+.legal-aid-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Message animations */
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-enter {
+  animation: messageSlideIn 0.3s ease-out;
+}
+
+/* Typing indicator animations */
+@keyframes typingDot {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+}
+
+.typing-dot {
+  animation: typingDot 1.4s infinite;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Enhanced button hover effects */
+.legal-aid-button {
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.legal-aid-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.legal-aid-button:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+/* Enhanced input focus effects */
+.legal-aid-input:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: #3b82f6;
+}
+
+.legal-aid-textarea:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: #3b82f6;
+}
+
+/* Category badge animations */
+.category-badge {
+  transition: all 0.2s ease;
+}
+
+.category-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Conversation card hover effects */
+.conversation-card {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.conversation-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent, rgba(59, 130, 246, 0.1));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: inherit;
+}
+
+.conversation-card:hover::after {
+  opacity: 1;
+}
+
+/* Modal backdrop blur */
+.modal-backdrop {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Enhanced message bubbles */
+.message-bubble {
+  position: relative;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.message-bubble.user {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.message-bubble.ai {
+  background: #1f2937;
+  border: 1px solid #374151;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Online status indicator */
+.online-indicator {
+  position: relative;
+}
+
+.online-indicator::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border: 2px solid #1f2937;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #1f2937 25%, #374151 50%, #1f2937 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Enhanced file upload area */
+.file-upload-area {
+  border: 2px dashed #4b5563;
+  transition: all 0.2s ease;
+}
+
+.file-upload-area:hover {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.file-upload-area.dragover {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  transform: scale(1.02);
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .legal-aid-container {
+    padding: 1rem;
+  }
+  
+  .conversation-card {
+    padding: 0.75rem;
+  }
+  
+  .message-bubble {
+    max-width: 85%;
+  }
+  
+  .modal-content {
+    margin: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+}
+
+/* Dark theme enhancements */
+@media (prefers-color-scheme: dark) {
+  .legal-aid-input::placeholder {
+    color: #9ca3af;
+  }
+  
+  .legal-aid-textarea::placeholder {
+    color: #9ca3af;
+  }
+}
+
+/* Accessibility improvements */
+.legal-aid-button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.legal-aid-input:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .message-bubble {
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+  }
+}
