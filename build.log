@@ -1,0 +1,40 @@
+  ▲ Next.js 14.2.5
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./src/components/AnalyticsDashboard.jsx
+Error: 
+  [31mx[0m Unterminated string constant
+     ,-[[36;1;4m/home/flair/Legalize-Frontend/src/components/AnalyticsDashboard.jsx[0m:107:1]
+ [2m107[0m |                 </div>
+ [2m108[0m |               )}
+ [2m109[0m |             </div>
+ [2m110[0m |             <div style={{ fontSize: '2rem', opacity: 0.3' }}>👥</div>
+     : [31;1m                                                        ^^^^^^^^^^^^^^^[0m
+ [2m111[0m |           </div>
+ [2m112[0m |         </div>
+     `----
+
+  [31mx[0m Expected ',', got 'string literal ( }}>👥</div>, ' }}>👥</div>
+  [31m|[0m )'
+     ,-[[36;1;4m/home/flair/Legalize-Frontend/src/components/AnalyticsDashboard.jsx[0m:107:1]
+ [2m107[0m |                 </div>
+ [2m108[0m |               )}
+ [2m109[0m |             </div>
+ [2m110[0m |             <div style={{ fontSize: '2rem', opacity: 0.3' }}>👥</div>
+     : [31;1m                                                        ^^^^^^^^^^^^^^^[0m
+ [2m111[0m |           </div>
+ [2m112[0m |         </div>
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/AnalyticsDashboard.jsx
+./src/app/dashboard/admin/page.jsx
+
+
+> Build failed because of webpack errors

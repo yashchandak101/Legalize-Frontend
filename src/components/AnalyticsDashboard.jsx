@@ -107,7 +107,7 @@ export default function AnalyticsDashboard({ userRole }) {
                 </div>
               )}
             </div>
-            <div style={{ fontSize: '2rem', opacity: 0.3' }}>👥</div>
+            <div style={{ fontSize: '2rem', opacity: 0.3 }}>👥</div>
           </div>
         </div>
 
@@ -124,7 +124,7 @@ export default function AnalyticsDashboard({ userRole }) {
                 </div>
               )}
             </div>
-            <div style={{ fontSize: '2rem', opacity: 0.3' }}>📋</div>
+            <div style={{ fontSize: '2rem', opacity: 0.3 }}>📋</div>
           </div>
         </div>
 
@@ -141,7 +141,7 @@ export default function AnalyticsDashboard({ userRole }) {
                 </div>
               )}
             </div>
-            <div style={{ fontSize: '2rem', opacity: 0.3' }}>💰</div>
+            <div style={{ fontSize: '2rem', opacity: 0.3 }}>💰</div>
           </div>
         </div>
 
@@ -158,7 +158,7 @@ export default function AnalyticsDashboard({ userRole }) {
                 </div>
               )}
             </div>
-            <div style={{ fontSize: '2rem', opacity: 0.3' }}>📅</div>
+            <div style={{ fontSize: '2rem', opacity: 0.3, color: 'var(--text-light)' }}>📅</div>
           </div>
         </div>
       </div>
