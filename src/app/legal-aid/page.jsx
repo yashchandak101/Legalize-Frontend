@@ -583,7 +583,7 @@ export default function LegalAidPage() {
                   } p-4`}>
                     <div className="flex items-start justify-between mb-2">
                       <p className={`font-medium text-sm ${
-                        message.message_type === 'user' ? 'text-blue-100' : 'text-gray-300'
+                        message.message_type === 'user' ? 'text-blue-100' : 'text-blue-400'
                       }`}>
                         {message.message_type === 'user' ? 'You' : 'AI Legal Assistant'}
                       </p>
